@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KINTEX</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="grid-media.css">
+    <link rel="stylesheet" href="css/kintex.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:767px)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/kintex.js"></script>
+</head>
+<body>  
+    <!-- quick menu(pc) -->
+    <aside class="quick">
+        <div class="wrap">          
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-info"></i>
+                        <span>운영시간</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-mypage"></i>
+                        <span>나의정보</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-reservation"></i>
+                        <span>임대신청</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-schedule"></i>
+                        <span>전시일정</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon icon-top"></i>
+                        <span>위로가기</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <header>
+        <div class="center">
+            <h1><a href="#" class="icon icon-logo"><span class="blind">KINTEX</span></a></h1>
+            
+            
+            <!-- pc 헤더 버튼그룹 -->
+            <nav>
+                <!-- 모바일메뉴버튼/닫기버튼 -->
+                <button class="icon icon-menu"><span class="blind">메뉴</span></button>
+                <div class="btn-group">
+                    <a href="#" class="icon icon-blogin">
+                        <span class="blind">로그인</span>
+                        <span class="user-name">송정은</span> 
+                        <!-- <button class="logout">로그아웃</button> -->
+                    </a>
+                    
+                    <a href="#" class="icon icon-bsearch" id="btn-search-open">
+                        <span class="blind">검색</span>
+                    </a>
+                    <!-- 영어변환 -->
+                    <a href="#" class="icon icon-eng" id="btn-lang">
+                        <span class="blind">영어전환</span>
+                    </a>
+                    <div class="btn-tooltip">English ver.</div>
+                </div>
+                <!-- 모바일 검색 폼 -->
+                <form action="#">
+                    <label for="search" class="blind">검색</label>
+                    <input type="text" id="search">
+                    <button class="icon icon-bsearch"><span class="blind">검색</span></button>
+                </form>                         
+                <ul class="gnb">
+                    <!-- 1depth -->
+                    <li>
+                        <a href="#">행사일정<i class="icon icon-dropdown"></i></a>
+                         <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">전체일정</a></li>
+                            <li><a href="#">전시일정</a></li>
+                            <li><a href="#">회의일정</a></li>
+                            <li><a href="#">문화공연</a></li>
+                            <li><a href="#">기업행사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">시설안내<i class="icon icon-dropdown"></i></a>
+                        <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">전시홀</a></li>
+                            <li><a href="#">회의실</a></li>
+                            <li><a href="#">오피스</a></li>
+                            <li><a href="#">부대시설</a></li>
+                            <li><a href="#">야외공연장</a></li>
+                            <li><a href="#">주차안내</a></li>
+                            <li><a href="#">무선인터넷</a></li>
+                            <li><a href="#">킨텍스VR</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">킨텍스임대<i class="icon icon-dropdown"></i></a>
+                        <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">전시홀임대</a></li>
+                            <li><a href="#">회의실임대</a></li>
+                            <li><a href="#">오피스임대</a></li> 
+                            <li><a href="#">팝업스토어임대</a></li>
+                            <li><a href="#">상설전시장임대</a></li>
+                            <li><a href="#">등록업체 현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보센터<i class="icon icon-dropdown"></i></a>
+                        <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">관련기사</a></li>
+                            <li><a href="#">킨텍스갤러리</a></li>
+                            <li><a href="#">뉴스레터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">고객센터<i class="icon icon-dropdown"></i></a>
+                        <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                            <li><a href="#">분실물관리</a></li>
+                            <li><a href="#">문화공연</a></li>
+                            <li><a href="#">광고안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">킨텍스소식<i class="icon icon-dropdown"></i></a>
+                        <!-- 2depth -->
+                        <ul>
+                            <li><a href="#">개요</a></li>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">사업영역</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">경영공시</a></li>
+                            <li><a href="#">VISION2020</a></li>
+                            <li><a href="#">연혁/조직도</a></li>
+                            <li><a href="#">채용안내</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 킨텍스app바로가기 -->
+                <a href="#" class="app"> 
+                    <i class="icon icon-app"></i>
+                    킨텍스APP 바로가기
+                </a>
+
+                              
+                <!-- pc에서만 보이는 2depth 아이콘 -->
+                <span class="banner"></span>
+            </nav>  
+        </div>  
+        <!-- 2depth 배경(pc) -->
+        <div class="bg"></div>  
+    </header>
+    <section>
+        <!-- 메인슬라이드 -->
+        <article class="main-slide">
+           <div class="slide swiper-container">
+                <ul class="slide-image swiper-wrapper">
+                    <li class="on swiper-slide" >
+                        <div class="img-box"><img src="img/main_slide1.jpg" alt=""></div> 
+                        <div class="center">
+                            <div class="text-box">
+                                <h2>2019 서울 모터쇼</h2>
+                                <h3>자동자의 트랜드와 미래를 봅니다. : 국제 모터스</h3>
+                                <a href="#" class="btn">예매하기</a>
+                            </div>                       
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <!-- <div>slide2</div> -->
+                        <div class="img-box"><img src="img/main_slide2.jpg" alt=""></div>     
+                        <div class="center">
+                            <div class="text-box right">
+                                <h2>대한민국 방위산업전</h2>
+                                <h3>국내 최대 규모의 지상무기 전문 방위산업전시회</h3>
+                                <a href="#" class="btn">예매하기</a>
+                            </div>                       
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                            <div class="img-box"><img src="img/main_slide3.jpg" alt=""></div>
+                        <div class="center">
+                            <div class="text-box">
+                                <h2>코리아 나라장터 엑스포 2019</h2>
+                                <h3>해외 바이어 초청 등 우수제품업체의 해외시장진출</h3>
+                                <a href="#" class="btn">예매하기</a>
+                            </div>                       
+                        </div>
+                    </li>
+                </ul>
+                <!-- 페이지네이션 -->
+                <div class="swiper-pagination"></div>
+                <!-- 이전다음버튼 -->
+                <button class="icon icon-80leftarrow arrow"><span class="blind">이전</span></button>
+                <button class="icon icon-80rightarrow arrow"><span class="blind">다음</span></button>
+            </div>
+        </article>
+       
+        
+        <!-- 8월의 kintex전시 -->
+        <article class="latest-display">
+           <div class="center">
+                <div class="title">
+                    <h2>8월의 KINTEX 전시</h2>
+                    <p>전시장별로 어떤 전시를 할까요?</p>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="place1" name="place">
+                    <label for="place1" class="place1">
+                        <span>제1전시장</span>
+                    </label>
+                    <input type="radio" id="place2" name="place">
+                    <label for="place2" class="place2">
+                        <span>제2전시장</span>
+                    </label>
+                    <div class="control">
+                        <span class="btn"></span>
+                    </div>
+                </div> 
+           </div>
+            
+            <div class="contents">
+                <!-- 제1전시장컨텐츠 -->
+                <div class="swiper-container">
+                        <ul class="swiper-wrapper">
+                          <!-- <li class="swiper-slide">
+                            <div class="wrap">
+                                <img src="img/display1_3.jpg" alt="">
+                                <div class="over">
+                                    <dl>
+                                        <dt>홀가분 베이비페어</dt>
+                                        <dd>8.1(월)~8.10(수)</dd>
+                                    </dl>
+                                    <a href="#" class="icon icon-plus"><span class="blind">더보기</span></a>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                                <div class="wrap">
+                                    <img src="img/display1_1.jpg" alt="">
+                                    <span class="icon icon-hot"></span>
+                                    <div class="over">
+                                        <dl>
+                                            <dt>PREMIUM PET SHOW 반려동물박람회</dt>
+                                            <dd>8.12(금)~8.14(일)</dd>
+                                        </dl>
+                                        <a href="#" class="icon icon-plus"><span class="blind">더보기</span></a>
+                                    </div>
+                                </div>
+                          </li>
+                          <li class="swiper-slide">
+                                <div class="wrap">
+                                    <img src="img/display1_2.jpg" alt="">
+                                    <div class="over">
+                                        <dl>
+                                            <dt>코베 베이비페어</dt>
+                                            <dd>8.1(월)~8.10(수)</dd>
+                                        </dl>
+                                        <a href="#" class="icon icon-plus"><span class="blind">더보기</span></a>
+                                    </div>
+                                </div>  
+                          </li>
+                          <li class="swiper-slide">
+                            <div class="wrap">
+                                <img src="img/display1_4.jpg" alt="">
+                                <div class="over">
+                                    <dl>
+                                        <dt>2019 KPCA 쇼</dt>
+                                        <dd>8.24(수)~8.26(금)</dd>
+                                    </dl>
+                                    <a href="#" class="icon icon-plus"><span class="blind">더보기</span></a>
+                                </div>
+                            </div>
+                          </li>
+                          <li class="swiper-slide">
+                            <div class="wrap">
+                                <img src="img/display1_5.jpg" alt="">
+                                <div class="over">
+                                    <dl>
+                                        <dt>KOREA 화학기구박람회</dt>
+                                        <dd>8.1(월)~8.10(수)</dd>
+                                    </dl>
+                                    <a href="#" class="icon icon-plus"><span class="blind">더보기</span></a>
+                                </div>
+                            </div>
+                          </li> -->
+                        </ul>
+                </div>
+                
+                <!-- 제2전시장컨텐츠(jquery로) -->
+                
+                <!-- 이달의 전시 컨트롤러 -->
+                <div class="controller">
+                    <button class="icon icon-arrow-prev"><span class="blind">이전</span></button>
+                    <button id="btn-play-top" class="icon icon-arrow-stop"><span class="blind">정지</span></button>
+                    <button class="icon icon-arrow-next"><span class="blind">다음</span></button>
+                </div>
+            </div>            
+        </article>
+
+        <!-- kintex 주요서비스 -->
+        <article class="service">
+            <div class="center">
+                <div class="title">
+                    <h2>KINTEX 주요서비스</h2>
+                    <p>고객과 미래를 함께하는 글로벌 TOP 10 전시컨벤션센터</p>
+                </div>
+                <div class="group">
+                    <span class="line1"></span>
+                    <div class="wrap">
+                        <span class="icon icon-display"></span>
+                        <!-- 모바일에서 묶어주기위해서 -->
+                        <div class="text-box">
+                            <button>전시행사</button>
+                            <!-- 모바일환경에서만 보이는 내용 -->
+                            <p>미래 경쟁력 있는 자체 전시회 육성 및 소규모 전시회 전략적 M&A</p>
+                        </div>
+                    </div>
+                    <div class="wrap right">
+                        <span class="icon icon-events"></span>
+                        <div class="text-box">
+                            <button>문화행사</button>
+                            <!-- 모바일환경에서만 보이는 내용 -->
+                            <p>국내 정상급 뮤지션들의 초대형 콘서트와 최대 5만명 수용가능한 문화행사 장소</p>
+                        </div>
+                    </div>
+                    <div class="wrap">
+                        <span class="icon icon-rental"></span>
+                        <div class="text-box">
+                            <button>공간임대</button>
+                            <!-- 모바일환경에서만 보이는 내용 -->
+                            <p>고객 만족을 기반으로 한 부가사업으로 광고 및 식음시설 및 기타 판매 지원</p>
+                        </div>
+                    </div>
+                    <span class="line2"></span>
+                </div>
+            </div>
+        </article>
+        
+        <!-- 입찰정보&공지사항 -->
+        <article class="bar">
+            <div class="center">
+                <!-- 입찰정보 -->
+                <div class="bar-left bars on">
+                    <div class="inner">
+                        <h2><a href="#"><i class="icon icon-bidding"></i><span>입찰공고</span></a></h2>
+                        <div class="wrap">
+                            <ul>
+                                <li><a href="#">2019 경기 국제보트 운송업무 대행 입찰공고입니다.</a><span>2019.03.24</span></li>
+                                <li><a href="#">KINTEXT 해피월드 시즌 12 'MBC 텔레몬스터 대모험' 경비인력 운영용역 입찰공고</a><span>2019.04.24</span></li>
+                                <li><a href="#">K SHOP 2019 조립부스, 컨퍼런스장, 부대시설 장치공사 입찰공고</a><span>2019.05.24</span></li>
+                                <li><a href="#">CFA Exam, SEO-19A/B책걸상 임대 및 설치용역 입찰공고</a><span>2019.06.24</span></li>
+                                <li><a href="#">2019 서울국제식품산업대전 전기간선 장치공사 입찰공고</a><span>2019.07.24</span></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="icon icon-40rightarrow"><span class="blind">자세히</span></a>
+                    </div>
+                </div>
+                <!-- 공지사항 -->
+                <div class="bar-right bars">
+                    <div class="inner">
+                        <h2><a href="#"><i class="icon icon-notice"></i><span>공지사항</span></a></h2>
+                        <div class="wrap">
+                            <ul>
+                                <li><a href="#">2019 고양시 마라톤 대회로 킨텍스 인근 도로 일부 통제 안내</a><span>2019.01.14</span></li>
+                                <li><a href="#">2019 9월 킨텍스 제 2전시장 수리안내</a><span>2019.02.21</span></li>
+                                <li><a href="#">킨텍스에서 관리본부장을 모십니다.(재공고)</a><span>2019.03.24</span></li>
+                                <li><a href="#">3대가 함께하는 기즈락 가족사랑 이벤트 참가자 모집</a><span>2019.04.30</span></li>
+                                <li><a href="#">킨텍스 법률 자문 법무법인 공개모집</a><span>2019.05.04</span></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="icon icon-40rightarrow"><span class="blind">자세히</span></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- kintex 행사갤러리 -->
+        <article class="gallery">
+            <div class="center">
+                <div class="title">
+                    
+                    <h2>KINTEX 행사갤러리</h2>
+                    <p>행사사진을 한눈에 볼 수 있어요.</p>
+                </div>
+                <div class="contents">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery1.jpg" alt="2019 한국국제냉난방공조전">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery2.jpg" alt="2018스타벅스크리스마스 기프트행사">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery3.jpg" alt="2019서울모터쇼">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery4.jpg" alt="2019 리빙페어">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery5.jpg" alt="2019 캠핑 & 피크닉페어">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery6.jpg" alt="2019 맘앤베이비엑스포">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery7.jpg" alt="2019 코코베베 유아용품페어">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery8.jpg" alt="2019 플레이엑스포">
+                                <!-- 마우스오버할 때 -->
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 스크립트로 더보기 누르면 나오게 할 부분 -->
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery9.jpg" alt="2018인사이드 3D프린팅 컨퍼런스&엑스포">
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery10.jpg" alt="2019 코리아빌드 경향하우징페어">
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery11.jpg" alt="2018 한국국제낚시박람회">
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/gallery12.jpg" alt="2018 Bentek나라장터엑스포">
+                                <div class="over">
+                                    <i class="icon icon-60wplus"><span class="blind">더보기</span></i>
+                                </div>
+                            </a>
+                        </li> 
+                        
+                    </ul>
+                </div>
+                <button class="icon icon-60wplus"><span class="blind">더보기</span></button>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <div class="foot-list">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">찾아오는길</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+        </div>
+        <!-- 킨텍스 로고 -->
+        <a href="#" class="icon icon-logo"><span class="blind">kintex</span></a>
+        <!-- sns -->
+        <div class="sns">
+            <ul>
+                <li><a href="#" class="icon icon-facebook"><span class="blind">facebook</span></a></li>
+                <li><a href="#" class="icon icon-youtube"><span class="blind">youtube</span></a></li>
+                <li><a href="#" class="icon icon-kakao"><span class="blind">kakaotalk</span></a></li>
+                <li><a href="#" class="icon icon-tumbler"><span class="blind">tumbler</span></a></li>
+                <li><a href="#" class="icon icon-google"><span class="blind">google</span></a></li>
+            </ul>
+        </div>
+        <!-- footer 정보(pc) -->
+        <div class="info center">
+            <p>주소 : (10390) 경기도 고양시 일산서구 킨텍스로 217-60</p>
+            <p>대표전화 : 031-810-8114</p>
+            <p>사업자 등록번호 : 128-81-78009</p>
+            <p>팩스 : 031-810-8083</p>
+            <p>이메일 : cklee@kintex.com</p>
+            
+        </div>
+        <small> Copyright &copy; KINTEX All Rights Reserved.</small>
+    </footer>
+
+    <!-- 로그인팝업 -->
+    <div class="login-pop">
+        <div class="center">
+           <div class="box">
+                <button class="icon icon-40close"><span class="blind">닫기</span></button>
+                <h2 class="icon icon-logo"></h2>
+                <form action="#">            
+                    <!-- 로그인/비밀번호 입력-->
+                    <fieldset class="input">
+                        <legend>로그인</legend>
+                        <input type="text" id="id" class="login" value="송정은" placeholder="아이디를 입력하세요.">
+                        <input type="password" id="pw" class="pw" value="1234"  placeholder="비밀번호를 입력하세요.">
+                        <div class="checkbox">
+                            <input type="checkbox" id="save-id" class="save-id">
+                            <label for="save-id">아이디 저장</label>
+                        </div>
+                        <button>로그인</button>
+                    </fieldset>    
+                </form>
+                <p class="warn">*타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로,     정기적인 비밀번호 변경을 해주시길 바랍니다.<br>
+                *킨텍스 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox, Safari 브라우저에 최적화 되어있습니다.</p>
+                <!-- 하단버튼그룹 -->
+                <div class="btn-group">
+                    <button>회원가입</button>
+                    <button>아이디 찾기</button>
+                    <button>비밀번호 찾기</button>
+                </div>  
+           </div>
+          
+        </div>  
+    </div>
+
+    <!-- 갤러리팝업 -->
+    <div class="gallery-pop">
+        <div class="center">
+             <h3>킨텍스 하우징 리빙페어</h3>
+             <div class="wrap">
+                <div class="contents"> 
+                </div>
+            </div>
+             <button class="icon icon-40close"><span class="blind">닫기</span></button>
+        </div>
+     </div>
+
+    <!-- 팝업배경 -->
+    <div class="popup-bg"></div>
+</body>
+</html>

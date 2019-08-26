@@ -8,13 +8,9 @@ button{background: none; border: 0;outline: none;}
 body{
     font-family: 'Nanum Gothic', sans-serif;
 }
-<<<<<<< HEAD
 html{
     scroll-behavior: smooth;
 }
-=======
-
->>>>>>> a5141d88a67764accbcd6cd8b5277ebf5db5a550
 /* 네비게이션 */
 .menu {
 	position: fixed;
@@ -637,11 +633,7 @@ button:hover{background: #666;}
 #contact .row .social-link li{
     float: left;
 }
-<<<<<<< HEAD
 #contact .row .social-link li:first-child{margin-right: 7px;}
-=======
-#contact .row .social-link li:first-child{margin-right: 20px;}
->>>>>>> a5141d88a67764accbcd6cd8b5277ebf5db5a550
 #contact .row .social-link li:last-child{float: right;}
 #contact .row .social-link li a{
     display: block;
@@ -711,8 +703,4 @@ button:hover{background: #666;}
     font-size: 32px;
     width: 40px;
     line-height: 40px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a5141d88a67764accbcd6cd8b5277ebf5db5a550

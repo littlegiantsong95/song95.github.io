@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WCUP-Calendar</title>
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="css/cal.css">
+    <link rel="stylesheet" href="css/common.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 모바일 스와이프 링크 -->
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script> -->
+    <!-- /모바일 스와이프 링크 -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/cal,tabMore.js"></script>
+    <script src="js/cal.js"></script>
+</head>
+<body>
+    <aside class="bottomNav">
+        <ul>
+            <li><a href="">
+                    <i class="icon icon-myPage"></i>
+                    <span class="blind">마이페이지</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class="icon icon-graph"></i>
+                    <span class="blind">몸상태분석</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class="icon icon-dDay on"></i>
+                    <span class="blind">디데이</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class="icon icon-wcup"></i>
+                    <span class="blind">생리컵정보</span>
+                </a>
+            </li>
+            <li><a href="">
+                    <i class="icon icon-setting"></i>
+                    <span class="blind">환경설정</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <section>
+        <div class="calendar">
+            <div class="btnGroup">
+                <a href="#">
+                    <i class="icon icon-tip"></i>
+                    <span class="blind">아이콘정보</span>
+                </a>
+                <div class="tipBox">
+                    <ul class="top">
+                        <li><i class="icon icon-tipStart"></i><span>생리시작</span></li>
+                        <li><i class="icon icon-tipEnd"></i><span>생리끝</span></li>
+                        <li><i class="icon icon-tipLove"></i><span>성관계(피임X)</span></li>
+                        <li><i class="icon icon-tipLoveP"></i><span>성관계(피임O)</span></li>
+                        <li> <i class="icon icon-tipDrug"></i><span>피임약복용</span></li>
+                    </ul>
+                    <span class="line"></span>
+                    <div class="bottom">
+                        <div class="wrap">
+                            <p>1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                        </div>
+                        <span>생리일</span>
+                        <span>예상생리기간</span>
+                        <span>가임기</span>
+                        <span>배란일</span>
+                    </div>
+                    
+                </div>
+                <a href="cal.html">오늘</a>
+                
+            </div>
+            
+            <div id="datepicker"></div>
+            <div class="tabPop">
+                <ul>
+                    <li><a href="#">
+                            <i class="icon icon-start"></i>
+                            <span class="blind">생리시작</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="icon icon-end"></i>
+                            <span class="blind">생리끝</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="icon icon-love"></i>
+                            <span class="blind">사랑한날</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="icon icon-loveP"></i>
+                            <span class="blind">사랑한날(피임)</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <i class="icon icon-drug"></i>
+                            <span class="blind">약복용</span>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                        <i class="icon icon-plus"></i>
+                        <span class="blind">더보기</span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <span>날짜를 탭하여 아이콘을 입력해주세요.</span>
+            <!-- <div class="col">
+                <span>8</span>
+                <div class="box">
+                    <div>
+                        <i class="icon icon-tipStart"></i>
+                        <span>생리시작</span>
+                    </div>
+                    <div class="cupRecord">
+                        <i class="icon icon-cup1"></i>
+                        <i class="icon icon-cup2"></i>
+                        <i class="icon icon-cup3"></i>
+                    </div>
+                    <div class="conRecord">
+                        <i class="icon2 icon-2appetite"></i>
+                        <i class="icon2 icon-2fever"></i>
+                        <i class="icon2 icon-2chestache"></i>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="bg"></div>
+        <div class="tbg"></div>
+    </section>   
+</body>
+</html>

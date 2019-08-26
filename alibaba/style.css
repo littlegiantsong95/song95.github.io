@@ -1,0 +1,609 @@
+@charset "UTF=8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto')
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css)
+*{padding:0; margin:0;}
+
+    
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+a, a:visited { color: rgba(84, 184, 255, 1); text-decoration: none; }
+    a:hover { color: rgba(255, 106, 0, 0.8); }
+
+img {
+    width: 100%;
+}
+
+h2 {
+/*
+    font-family: sans-serif;
+    text-align: 
+*/
+    
+}
+
+p {
+    font-size: 22px;
+}
+
+h4 {
+    color: #808080;
+    font-size: 6pt;
+    font-weight: 100;
+}
+
+form {
+    font-size: 13pt;
+    position: absolute;
+    
+/*
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2pt;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+*/
+}
+
+
+
+form {
+    margin: 200px 0 0 190px;
+}
+
+/* piegraph-button-list 세로로 만들어준다*/
+label {
+    display: block;
+/*    margin-top: 70px;*/
+    
+    padding: 7px;
+/*    border: 1px dashed yellow;*/
+}
+
+/*pay-company*/
+h3 {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: #595959; 
+}
+
+h4 {
+    font-size: 80px;
+    font-weight: 800;
+    text-align: center;
+}
+
+p3 {
+    color: rgba(255,255,255,0.5);
+    font-size: 13px; 
+}
+
+p2 {
+    line-height: 20px;
+    font-size: 10pt;
+    font-weight: 150;
+    color: #b3b3b3;
+}
+
+p4 {
+    font-size: 6pt;
+    font-weight: 200;
+    color: #808080;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 890px;
+    height: 72px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+#nav-title {
+    float: left;
+    padding: 0 140px;
+/*    border: 0.5px dashed red;*/
+}
+
+
+
+ul {
+    float: right;
+    padding: 0 50px 0 0;
+    margin: 14px 0 0;
+/*    border: 0.5px dashed white;*/
+}
+
+.online-rect {
+    padding-left: 10px;
+    margin: 0 50px;
+    font-size: 11pt;
+    color: #b3b3b3;;
+}
+
+.mobile-rect {
+    padding-left: 10px;
+    margin: 0 10px;
+    font-size: 11pt;
+    color: rgba(84, 184, 255, 1);
+}
+
+
+li {
+    float: left;
+    color: rgba(84, 184, 255, 1);
+    padding: 14px 60px;
+/*    padding: 14px 60px;*/
+/*    border: 0.5px dashed gray;*/
+}
+
+/*legend company list*/
+#list-second {
+    height: 40px;
+    margin: 50px 190px;
+/*    border: 1px dashed gray;*/
+}
+
+.legend-style {
+    margin: 0 20px;
+    padding: 1px 0;
+    font-size: 6px;
+    font-weight: 200;
+/*    border: 0.5px dashed red;*/
+
+
+}
+
+header {
+    width: 100%;
+    position: relative;
+    height: 480px;
+    background: url("./images/character-03.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin: 20px 0 200px 0;
+}
+
+
+.header-title {
+    position: relative;
+    top: 290px;
+    left: 40px;
+    width: 500px;
+    color: rgba(255, 106, 0, 0.8);
+    font-size: 60pt;
+    text-align: center;
+/*    background-color: rgba(0,0,0,0.6);*/
+}
+.header-title2 {
+    position: absolute;
+    top: 160px;
+    left: 140px;
+    width: 900px;
+    color: rgba(255, 106, 0, 0.8);
+    font-size: 45pt;
+    text-align: right;
+}
+.content-title {
+    width: 300px;
+    color: #1a1a1a;
+    font-size: 27px;
+    font-weight: 400;
+    padding: 5px 0;
+/*    border: 1px dashed red;*/
+}
+
+.content-title-underline {
+    float: left;
+    width: 50px;
+    margin: -25px 2px 0 0;
+    padding: 0 1px;
+    border-bottom: 2.3px solid rgba(84, 184, 255, 1); 
+}
+.content-article {
+    width: 800px;
+    color: #404040;
+    line-height: 22px;
+    font-size: 15px;
+    font-weight: 200;
+    padding: 10px 0;
+    margin: -60px 0 0 0;
+/*    border: 1px dashed red;*/
+}
+
+
+
+.content-oneWord-box {
+    width: 100%;
+    height: 280px;
+    margin: 45px 0;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+/*    border: 1px dashed steelblue;*/
+    
+}
+
+.marks {
+    margin: 30px 225px;
+    width: 110px;
+    height: 110px;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 200;
+    color: white;
+    background-color: rgba(84, 184, 255, 1);
+/*    border: 1px dashed yellow;*/
+}
+
+.content-oneWord {
+    margin: 20px 225px;
+    padding: 8px 0;
+    font-size: 25px;
+    font-weight: 200;
+    line-height: 35px;
+    text-align: left;
+/*    border: 1px dashed yellow;*/
+}
+
+
+.floatRight {
+    float: right;
+    width: 535px !important; /* 오른쪽 article 상자 가로사이즈 조절*/
+/*    vertical-align: middle;*/
+
+}
+
+footer {
+    height: 120px;
+    padding: 80px 0;
+    margin: 80px 0 0 0;
+    color: white;
+    background-color: #595959;
+    text-align: center;
+}
+
+#frame {
+    width: 960px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 79px;
+/*    border: 1px dashed steelblue;*/
+}
+
+#frame2 {
+    width: 960px;
+    margin: 0 auto;
+/*    margin-top: 79px;*/
+/*    border: 1px dashed red;*/
+}
+
+
+.split-line-blue {
+    width: 100%;
+    height: 3px;
+    margin: -210px auto;
+    margin-bottom: 80px;
+    border-bottom: 30px solid rgba(84, 184, 255, 1);
+}
+.split-line-gray {
+    width: 500px;
+    height: 3px;
+    margin: 140px auto;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.split-line-gray2 {
+    width: 500px;
+    height: 3px;
+    margin: 30px auto;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+
+#alipay-Image {
+/*    width: 100%;*/
+    margin: 110px 0;
+    position: relative;
+    height: 600px;
+    background: url("./images/alipay.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.alipay-title{
+    position: absolute;
+    top: 130px;
+    left: 460px;
+    width: 500px;
+    color: rgba(84, 184, 255, 1);
+    font-size: 28pt;
+    font-weight: 500;
+    text-align: center;
+/*    border: 0.5px dashed white;*/
+}
+
+/*subsidiary*/
+
+#subsidiary {
+    margin: 90px 0;
+    width: 100%;
+    height: 200px;
+/*    border: 0.5px dashed pink;*/
+}
+
+.subs-year {
+    width: 90%;
+/*    height: 200px;*/
+    float: left;
+/*    border: 0.5px dashed steelblue;*/
+}
+
+.year {
+    color: #595959;
+    font-size: 20px;
+    font-weight: 200;
+    margin-right: 117.5px;
+    float: left;
+/*    border: 0.5px dashed yellow;*/
+}
+.year-right {
+    color: #595959;
+    font-size: 20px;
+    font-weight: 200;
+    float: right;
+/*    border: 0.5px dashed yellow;*/
+}
+
+.subs-company-all {
+    width: 100%;
+    height: 190px;
+    float: left;
+/*    border: 1px dashed green;*/
+}
+.subs-name {
+    width: 9%;
+    float: left;
+    margin-right: 55px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    font-size: 8px;
+    font-weight: 100;
+/*    border: 0.5px dashed red;*/
+}
+
+.subs-name-right {
+    margin-right: 47px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    font-size: 8px;
+    font-weight: 100;
+/*    border: 0.5px dashed red;*/
+    
+}
+
+/*bar-graph*/
+.bartitle {
+    fill: #737373;
+}
+
+
+
+/*pay-company*/
+.pay-company {
+    background-color: white;
+    overflow: hidden;
+    margin: 80px 0;
+    margin-bottom: 140px;
+/*    border: 0.5px dashed red;*/
+}
+.white-box {
+    width: 200px;
+    height: 420px;
+    margin: 0 50px 0 0;
+    background-color: white;
+/*    border: 0.5px dashed steelblue;*/
+}
+.white-box-right {
+    width: 200px;
+    height: 420px;
+    background-color: white;
+/*    border: 0.5px dashed steelblue;*/
+}
+
+.float-box-left {
+    float: left;
+}
+
+.float-box-right {
+    float: right;
+}
+
+
+.pietitle {
+    fill: #737373;
+}
+
+/*piegraph*/
+svg {
+/*    border: 1px dashed steelblue;*/
+    clear: both;
+}
+
+.two-pie-graph {
+    padding: 60px 0;
+    margin: 50px auto;
+    height: 450px;
+/*    border: 1px dashed steelblue;*/
+}
+
+
+#legend-com {
+    float: right;
+    margin: 0 auto;
+    width: 80px;
+    height: 190px;
+/*    border: 1px dashed steelblue;*/
+
+
+}
+
+
+#pie-graph-sec {
+    margin: 0 auto;
+/*    margin: 0 80px 0 0;*/
+    float: right;
+}
+
+
+.last-pie-graph {
+/*    padding: 60px 0;*/
+    margin: 90px auto;
+    height: 500px;
+/*    border: 1px dashed steelblue;*/
+    
+}
+#pie-graph-thi {
+    margin: 25px 0 0 280px;
+    float: left;
+}
+
+/*제목 가운데로 오도록 다시 잘 수정하기*/
+.pie-graph-thi-title{
+    width: 960px;
+    float: left;
+    color: #737373;
+    font-size: 11pt;
+    text-align: center;
+}
+
+
+/*bargraph*/
+.two-bar-graph {
+    padding: 60px 0;
+    margin: 90px 0 20px 0;
+    height: 450px;
+/*    border: 1px dashed steelblue;*/
+}
+
+#bar-graph-basic {
+    
+}
+
+#bar-graph-sec {
+    margin: 0 auto;
+    float: right;
+}
+
+
+
+/*linegraph*/
+.line-graph {
+    
+/*    clear: both;*/
+    width: 750px;
+    margin: 30px auto;
+    margin-bottom: 160px;
+    
+}
+
+.line {
+    fill: none;
+/*    stroke: black;*/
+}
+
+.line-dot {
+    fill: #444444;
+}
+
+/*가로세로 축 legend*/
+.axis, .axis path, .axis line {
+    width: 90%;
+/*    height: auto;*/
+    fill: none;
+    stroke: #444444;
+}
+
+.lineXName {
+    font-size: 10pt;
+    text-anchor: middle;
+    fill: #444444;
+}
+
+.line-colorA {
+    fill: none;
+    stroke: #b3b3b3;
+    stroke-width: 2px;
+}
+
+.line-colorB {
+    fill: none;
+    stroke: rgba(84, 184, 255, 1);
+    stroke-width: 2px;
+}
+
+.dot-colorA {
+    fill: #b3b3b3;
+    stroke: none;
+}
+
+.dot-colorB {
+    fill: rgba(84, 184, 255, 1);
+    stroke: none;
+}
+
+text-itemA {
+    color: #b3b3b3;
+    stroke: none;
+    
+}
+
+text-itemB {
+    fill: #ff6a00;
+    stroke: none;
+}
+
+.label {
+    background-color: #ff6a00;
+}
+
+
+#footer-all {
+    margin: 0 auto;  
+    width: 210px;
+    height: 50px;
+/*    border: 1px dashed white;*/
+}
+
+.footer-SNS {
+    margin: 10px 10px;
+    float: left;
+    width: 30px;
+    height: 30px;
+/*    border: 1px solid yellow;*/
+}
+
+
+#bottom-menu-all {  
+    margin: 0 auto;  
+    margin-bottom: 40px;
+    width: 290px;
+    height: 40px;
+/*    border: 1px dashed white;*/
+}
+
+.bottom-menu {
+    text-align:center;
+    font-size: 15px;
+    margin: 10px 10px;
+    float: left;
+    width: 50px;
+    height: 20px;
+/*    border: 1px solid yellow;*/
+}

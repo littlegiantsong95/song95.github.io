@@ -1,0 +1,369 @@
+@charset 'UTF-8';
+i{display: inline-block;}
+.icon{background-image: url(../img/sprite_m.png); background-size:500px 500px;}
+.icon-logo {width:140px;height:25px; background-position: 0 0;}
+.icon-menu{width:40px; height:40px; background-position: -150px 0;}
+/* 메뉴버튼-> 닫기버튼으로 바꿀 때 */
+.icon-menu.on{background-position:-50px -100px;}
+
+.icon-info{width:40px ;height:40px ;background-position: -200px -150px;}
+.icon-mypage{width:40px ;height:40px ;background-position: -150px -150px;}
+.icon-reservation{width:40px ;height:40px ;background-position: -100px -150px;}
+.icon-schedule{width:40px ;height:40px ;background-position: -50px -150px;}
+.icon-top{width:40px ;height:40px ;background-position: 0  -150px;}
+
+.icon-arrow-prev{width: 40px; height:40px; background-position: -300px 0;}
+.icon-arrow-play{width: 40px; height:40px; background-position: -450px -50px;}
+.icon-arrow-stop{width: 40px; height:40px; background-position: -350px 0;}
+.icon-arrow-next{width: 40px; height:40px; background-position: -400px 0;}
+
+.icon-dropdown{width:40px;height: 40px; background-position:0 -100px;}
+.icon-dropup{width:40px;height: 40px; background-position:0 -150px;}
+
+.icon-bsearch{width:40px ;height:40px ;background-position: -100px -100px;}
+.icon-blogin{width:40px ;height:40px ;background-position: -200px -100px;}
+.icon-eng{width:40px ;height:40px ;background-position: -50px -400px;}
+.icon-kor{width:40px ;height:40px ;background-position: 0 -400px;}
+
+.icon-app{width:40px ;height:40px ;background-position: -250px -100px;}
+.icon-bidding{width:40px ;height:40px ;background-position: -250px -150px;}
+.icon-notice{width:40px ;height:40px ;background-position: -300px -150px;}
+
+.icon-display{width:130px;height:130px; background-position: -150px -200px;}
+.icon-events{width:130px;height:130px; background-position: 0 -200px;}
+.icon-rental{width:130px;height:130px; background-position: -300px -200px;}
+.icon-40rightarrow{width:40px ;height:40px;background-position: -350px -150px;}
+.icon-60wplus{width:50px;height:50px; background-position: -450px 0;}
+.icon-dropupw{width:50px;height: 50px; background-position:-400px -150px;}
+
+
+.icon-facebook{width:40px ;height:40px;background-position: 0 -350px;}
+.icon-youtube{width:40px ;height:40px;background-position: -50px -350px;}
+.icon-kakao{width:40px ;height:40px;background-position: -100px -350px;}
+.icon-tumbler{width:40px ;height:40px;background-position: -150px -350px;}
+.icon-google{width:40px ;height:40px;background-position: -200px -350px;}
+.icon-40close{width:40px ;height:40px;background-position: -50px -100px;}
+
+
+/* aside 퀵메뉴*/
+.quick{
+    right:0;bottom: 0;
+    top: initial;
+    width: 100%; height: 50px;
+    box-shadow: 0px 0px 4px #444;
+    transition: 0.5s;
+}
+.quick .wrap{height: 100%;}
+.quick .wrap ul{height: 100%;}
+.quick li{
+    width: 20%; height: 100%; float: left;
+    border-radius: 0; background: #fff;
+   
+}
+.quick .wrap li:not(:last-child){
+    border-right: 1px solid #949697; box-sizing: border-box;
+}
+.quick li a{width: 100%; height: 100%;    text-align: center;}
+.quick li i{position: relative; display: inline-block; top: 5px;}
+.quick li span{display: none;}
+
+/*header*/
+header{height: 50px;}
+
+/* 메뉴버튼 열었을 때 왼쪽으로 이동 */
+header.open, section.open,
+footer.open, .quick.open{right: 300px;}
+
+
+
+header h1{display:block;text-align: center;line-height: 50px;}
+
+
+
+
+
+
+/*버튼 그룹*/
+header nav>.btn-group{
+    position: absolute; z-index: 6;
+    top: 5px; right: 10px;
+}
+header nav>.btn-group a:nth-child(2){display: none;}
+
+header nav>.btn-group a span:last-child{
+    display: initial;
+    width: 60px; border-radius: 20px;
+    background: #eee; color: #161616;
+    position: absolute;
+    right: 90px; top: 7px;
+    text-align: center; font-size: 18px;
+    display: none;
+}
+
+
+
+/*모바일검색폼*/
+nav form{
+    position: initial; display: block;
+    padding: 50px 10px 0 10px;
+    width: 100%;height: 50px;
+    border-bottom: 1px solid #666;
+    background: #fff;
+}
+nav form input{width: 285px; float: left; display: inherit;}
+nav form button{position:absolute; top:50px; right: 10px;}
+
+
+
+/* 1depth   */
+
+
+header nav{
+    position: fixed;  z-index: 1;
+    width:300px; height: 100%; 
+    border-top: 0;
+    top: 0; right: -300px;
+    background: #fff;
+    overflow: visible;
+    transition: 0.5s;
+}
+
+header .gnb ul{
+    position: relative;
+    font-size: 18px;
+    line-height: 46px;
+    background: #0d469f;
+    padding: 0;
+    display: none;
+    
+}
+header .gnb ul li{padding: 0 20px; border-bottom: 1px solid #fff; box-sizing: border-box; }
+header .gnb ul li a{color: #fff;}
+header .gnb ul li a::before{display: none;}
+nav>button{
+    position: absolute;
+    left: -50px;
+    display: block;
+    top: 5px;
+}
+
+/* 모바일에서는 네비게이션메뉴 스크롤시 변하면 안되니까 다시 재정의해준다. */
+header.scroll .gnb>li>a{color: #000; }
+header.scroll nav .btn-group a:nth-child(1){background-position: -200px -100px;}
+header.scroll nav .btn-group a:nth-child(3).icon-eng{background-position: -50px -400px;}
+header.scroll nav .btn-group a:nth-child(3).icon-kor{background-position: 0 -400px;}
+header.scroll nav .icon-menu.on{background-position: -300px -100px;}
+
+
+
+
+
+/* 네비게이션 펼쳐진 상태 */
+header nav.open{right: 0;}
+header nav .gnb{
+    padding-top: 100px;
+    left: 0; z-index: -1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header nav .gnb > li{
+    margin-right: 0;
+    width: 100%;
+    border-bottom: 1px solid #666;
+}
+header nav .gnb>li:hover{background: none;}
+
+header nav .gnb>li>a{
+    line-height: 50px; 
+    padding-left: 20px;
+}
+
+header nav .gnb > li > a:nth-of-type(1){font-size: 18px;}
+
+/* 드롭다운 아이콘 */
+header nav .gnb > li > a > i{
+    position: absolute; right: 10px; margin-top: 5px;
+}
+
+
+
+/* 킨텍스 app */
+nav .app{
+    display: block;
+    position: fixed; bottom: 0;
+    background: #e9ecef; width: 100%;   
+    font-size: 18px;
+    line-height: 50px; padding-left: 10px;
+}
+nav .app i{
+    position: relative; top: 10px;
+}
+
+
+section{top: 50px;}
+/* 제목 공통 */
+article .title{padding-top: 30px;}
+article .title h2{
+    padding: 5px 0;
+    font-size: 26px; 
+}
+article .title p{font-size: 14px;}
+
+/* main slide=============================================================== */
+/* textbox */
+.main-slide .slide{height: 500px;}
+.main-slide .slide .slide-image li .img-box img{width: 100%;}
+.main-slide .swiper-slide{width: auto;}
+.main-slide .slide .text-box{width:290px; padding-left: 32px;}
+.main-slide .slide .text-box h2{font-size: 30px; }
+.main-slide .slide .text-box h3{font-size: 14px;}
+.main-slide .slide .text-box a{
+    width: 120px; height: 50px;
+    line-height: 50px;
+    font-size: 24px; margin-top: 50px;
+}
+
+.main-slide .pagination{
+    position: absolute;
+    left: 50%; z-index: 8;
+    transform: translateX(-50%);
+    bottom: 40px;
+}
+.main-slide .pagination a{
+    width: 60px; height: 10px;
+    border: 1px solid #fff;
+    box-sizing: border-box; 
+    margin: 0 3px;
+}
+
+.main-slide button{
+    display: none;
+}
+
+/* latest display */
+.latest-display .radio{
+    position: relative;
+    display: block; margin: auto;
+    margin-top: 20px;
+
+}
+.latest-display .swiper-container{width: 100%;}
+
+.latest-display .swiper-container .swiper-slide-active {border: none; box-shadow: 0 0 10px rgb(0, 0, 0);}
+.latest-display .contents .wrap .over{display: none;}
+
+
+
+/* 주요서비스*/
+/*중간 선*/
+.service .group::before,.service .group span{display: none;}
+.service{background-image: url(../img/service1_m.jpg); height: 1140px;  }
+.service .group .wrap{
+    width: 100%;
+    padding: 55px 30px;
+    height: 300px;
+}
+.service .group .wrap:not(:last-child)::after{
+    position: absolute;
+    content: ""; top: 320px;
+    width: 230px; height: 1px; background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.service .group .wrap span{margin-top: 40px;}
+.service .group .wrap span{float: left;}
+
+.service .text-box{
+    display: inline-block; 
+    color: #fff; font-size: 22px; 
+    width: 150px; 
+    float: right;
+}
+/* 클래스 right 규칙 */
+.service .group .right span{float: right;}
+.service .group .right .text-box{float: left; }
+
+.service .text-box p{display: initial;font-weight: 100; font-size: 16px;}
+.service .text-box button{
+    display: block; margin: 20px auto; font-size: 20px;
+}
+/* 입찰정보&공지사항 ==========================================================================*/
+.bar{
+    overflow: hidden;
+    height: 100px;
+}
+
+.bar .bar-left, .bar .bar-right{
+    height: 50px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.bar .bar-left{
+    border-bottom: 2px solid #000;
+    border-right: 0;
+}
+.bar .bar-right{border-left: 0;}
+
+.bar .inner h2{margin: 0 10px;top: 5px;}
+
+.bar .inner h2 span:nth-of-type(1){display: none;}
+.bar .inner .wrap{line-height: 50px;margin: 0 50px 0 60px;height: 48px;}
+.bar .inner .wrap ul{height: 50px;}
+
+.bar .on .inner .wrap li span{ position: relative; right: 0; }
+.bar .inner .wrap li span{float: right; margin-right: 10px;}
+.bar .inner .wrap li>a{float: left;font-weight: 100;width: 240px !important;}
+.bar .inner .wrap+a{    
+    position: absolute; right: 10px;     
+    top: 6px;
+} 
+/* .bar .inner .wrap li>a {width: 240px;} */
+
+
+
+/*kintex 행사갤러리 */
+.gallery .contents ul{overflow: hidden;}
+.gallery .contents ul li{width: 50%;}
+/* .gallery-pop .contents li{width: 100%;} */
+.gallery-pop h3:before{height: 22px; width: 6px;}
+.gallery-pop h3{padding: 28px 22px;font-size: 16px;}
+.gallery-pop button{right: 10px;}
+
+
+/* footer */
+footer{margin-bottom: 50px;}
+
+footer .foot-list{    
+    padding: 10px;
+    height: 50px;
+    border-bottom: 1px solid #161616;
+    box-sizing: border-box;
+}
+footer .foot-list ul{
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    line-height: 30px;
+}
+footer .foot-list ul li{display: inline-block;}
+footer .foot-list ul li a {
+    padding :0;
+    padding-right: 48px;
+    width: max-content;
+}
+footer .info{display: none;}
+footer>a{margin-top: 50px;}
+footer .sns ul li{padding: 20px 10px;}
+
+.login-pop .btn-group>button{font-size: 13px}
+nav .btn-group .icon-blogin.login span.user-name{
+    top: 12px;
+    font-size: 13px;
+    width: 50px; 
+    height: 20px;
+}
+.login-pop p.warn{
+    padding: 30px 26px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setting</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/setting.css">
+     <!-- jquery 선언 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="js/common.js"></script>
+     <script src="js/setting.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <aside class="bottomNav">
+            <ul>
+                <li><a href="myPage.html">
+                        <i class="icon icon-myPage"></i>
+                        <span class="blind">마이페이지</span>
+                    </a>
+                </li>
+                <li><a href="graph.html">
+                        <i class="icon icon-graph"></i>
+                        <span class="blind">몸상태분석</span>
+                    </a>
+                </li>
+                <li><a href="cal.html">
+                        <i class="icon icon-dDay"></i>
+                        <span class="blind">디데이</span>
+                    </a>
+                </li>
+                <li><a href="wcup.html">
+                        <i class="icon icon-wcup"></i>
+                        <span class="blind">생리컵정보</span>
+                    </a>
+                </li>
+                <li><a href="setting.html">
+                        <i class="icon icon-setting on"></i>
+                        <span class="blind">환경설정</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <h3>환경설정</h3>
+        </header>
+        <div class="set-menu">
+            <a href="setting_lock.html">잠금설정
+                <button class="icon icon-arrowRG"></button>
+            </a>
+            <a href="setting_alarm.html">알림설정
+                <button class="icon icon-arrowRG"></button>
+            </a>
+            <a href="setting_qt.html">자주하는 질문
+                <button class="icon icon-arrowRG"></button>
+            </a>
+            <a href="#" class="reset">초기화
+                <button class="icon icon-arrowRG"></button>
+            </a>
+        </div>
+        <div class="app-info">
+            <div class="text">
+                <p>wcup</p>
+                <p>ver1.0</p>
+                <p>wcup@naver.com</p>
+            </div>
+        </div>
+        <!-- reset popup -->
+        <div class="reset-popup" style="display: none;">
+            <div class="popup">
+                <button class="icon icon-closeW" style="position:absolute; right: 0;"></button>
+                <p>W컵에 저장된 데이터를<br> 초기화합니다.</p>
+                <p class="small-p">초기화 후에는 복구할 수 없습니다.</p>
+                <span>삭제</span>
+            </div>
+            <div class="pop-bg"></div>
+        </div>
+       
+    </div>
+    
+</body>
+</html>

@@ -1,3 +1,11 @@
+@charset "UTF-8";
+body {
+    font-family: 'NanumSquareRound', sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
 .ui-datepicker-header.swipe, .ui-widget-header.swipe{
     height: 58px;
 }
@@ -8,7 +16,7 @@
 .ui-datepicker-title.swipe::after{
     position: absolute;
     content: "";
-    top: 28px; left: 50%; 
+    top: 28px; left: 50%;
     transform: translate(-50%);
     width: 32px; height: 32px;
     background-color: #8bcbc8;
@@ -30,7 +38,7 @@
 .btnGroup h1{font-size: 20px; color: #fff;line-height: 60px;}
 .btnGroup a:last-of-type{
     right: 10px;
-    color: #fff; 
+    color: #fff;
     line-height: 40px;
     text-align: center;
 }
@@ -38,7 +46,7 @@
 /* 툴팁 */
 .tipBox{
     position: absolute; top: 42px; left: 35px;
-    max-width: 140px; 
+    max-width: 140px;
     background: #fff; z-index: 3;
     border: 2px solid #8bcbc8;
     box-sizing: border-box;
@@ -97,8 +105,8 @@
 .ui-widget-header{background: #000; color: #fff; border: none;}
 .ui-datepicker-week-end{color: red;}
 .ui-datepicker-week-end:last-child{color: #8bcbc8;}
-.ui-state-default, .ui-widget-content .ui-state-default, 
-.ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, 
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active{background: none; border: 0; text-align: center;}
 .ui-widget.ui-widget-content{border: none;position: fixed;}
 .ui-datepicker{width: 100%; padding: 0;}
@@ -113,12 +121,12 @@ html .ui-button.ui-state-disabled:active{background: none; border: 0; text-align
 
 /* .ui-datepicker table {margin: 0;} */
 .ui-datepicker th{font-weight: normal; font-size: 16px;}
-/* .ui-state-highlight, .ui-widget-content .ui-state-highlight, 
+/* .ui-state-highlight, .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight{color: #fff;} */
 .ui-datepicker-calendar tbody tr{ border-top: 1px solid #ccc;}
 .ui-datepicker td{padding: 4px 0 40px 0;}
 .ui-state-default, .ui-widget-content .ui-state-default{
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
     width: 25px; height: 25px;
     border-radius:50%;  margin: auto;
 }
@@ -131,42 +139,66 @@ html .ui-button.ui-state-disabled:active{background: none; border: 0; text-align
 .ui-datepicker td:nth-child(1) a{color: red;}
 .ui-datepicker td:nth-child(7) a{color: #8bcbc8;}
 
-.ui-state-active, .ui-widget-content .ui-state-active, 
-.ui-widget-header .ui-state-active, a.ui-button:active, 
+.ui-state-active, .ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active, a.ui-button:active,
 .ui-button:active, .ui-button.ui-state-active:hover{
    color: #8bcbc8 !important;
    font-weight: 600;
    border: 1px solid #8bcbc8;
 }
-.ui-state-default, .ui-widget-content .ui-state-default, 
-.ui-widget-header .ui-state-default, .ui-button, 
-html .ui-button.ui-state-disabled:hover, 
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default, .ui-button,
+html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active
 .ui-widget-content a{color: #666;}
 .ui-state-active.start,
+.ui-state-active.end,
 .ui-state-active.love,
 .ui-state-active.loveP,
-.ui-state-active.drug{
+.ui-state-active.drug,
+.date-range-selected > .ui-state-default{
     position: relative;
 }
-.ui-state-active.start{
+.ui-state-active.start,
+.ui-state-active.end,
+.date-range-selected > .ui-state-default{
     color: #fff !important;
 }
 .ui-state-active.start::before{
     position: absolute;
     z-index: -1;
     content: "";
-    top: -4px; left: -3px; 
+    top: -4px; left: -3px;
     width: 56px; height: 32px;
     background-color: #8bcbc8;
 }
+
+/*-------------------------------JW----------------------------------*/
+/* Start랑 End 똑같은 효과를 주도록 함 */
+.ui-state-active.end::before{
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: -4px; left: -3px;
+    width: 56px; height: 32px;
+    background-color: #8bcbc8;
+}
+.date-range-selected > .ui-state-default::before{
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: -4px; left: -3px;
+  width: 56px; height: 32px;
+  background-color: #8bcbc8;
+}
+/* ------------------------------JW--------------------------------------- */
 .ui-state-active.love::after,
 .ui-state-active.loveP::after,
 .ui-state-active.drug::after{
     position: absolute;
     z-index: -1;
     content: "";
-    top: 22px; left: -3px; 
+    top: 22px; left: -3px;
     width: 32px; height: 32px;
     background: url(../img/wSprite.png);
     background-size: 900px 1000px;
@@ -208,7 +240,7 @@ html .ui-button.ui-state-disabled:active
     max-width: 597px;
 }
 .card .col>span{
-    font-size: 18px; 
+    font-size: 18px;
     color: #666;
     vertical-align: top;
     padding: 0 10px;
@@ -237,7 +269,7 @@ html .ui-button.ui-state-disabled:active
 }
 .btnGroup.swipe, .ui-datepicker-prev.swipe, .ui-datepicker-next.swipe{display: none;}
 .cupRecord{display: inline-block;}
-.conRecord{    
+.conRecord{
     position: absolute;
     right: 0;
     bottom: 7px;
@@ -247,7 +279,7 @@ html .ui-button.ui-state-disabled:active
 
 .tabPop{
     position: absolute; z-index: 3;
-    min-width: 300px; 
+    min-width: 300px;
     height: 50px;
     background: #fff;
     border: 2px solid #8bcbc8;
@@ -279,7 +311,7 @@ html .ui-button.ui-state-disabled:active
 
 /* tabMore 스타일 ========================================================================*/
 section.tabMore{padding-top: 102px;}
-header{    
+header{
     position: fixed; top: 0;
     right: 0; left: 0;
     background: #fff;
@@ -295,7 +327,7 @@ header .top a:last-of-type{right: 10px;}
 header .top>span{
     position: absolute;
     width: 40px; line-height: 40px;
-    font-size: 18px; font-weight: bold; 
+    font-size: 18px; font-weight: bold;
     color: #8bcbc8;
     left: 50%; top:50%; transform: translate(-50%, -50%);
     border:1px solid #8bcbc8;
@@ -313,10 +345,10 @@ header .top>span{
 }
 .tabMenu ul{
     text-align: center;
-    line-height: 42px;  
+    line-height: 42px;
     display: flex;
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;  
+    -webkit-overflow-scrolling: touch;
 }
 .tabMenu ul li{
     display: inline-block;
@@ -328,7 +360,7 @@ header .top>span{
 }
 .tabMenu ul li a.active{
     font-weight: 500;
-    color: #8bcbc8; 
+    color: #8bcbc8;
 }
 .effect{
     position: absolute;
@@ -373,7 +405,7 @@ header .top>span{
     border-radius: 50%;
     width: 15px; line-height: 15px;
     color:#fff; background: #fdae84;
-    font-size: 10px; 
+    font-size: 10px;
     vertical-align: bottom;
 }
 #amount > p button{color: #ccc; text-decoration: underline;}
@@ -429,7 +461,7 @@ header .top>span{
 .cupEdit .wrap select{
     float: right;
     width: 60%; height: 30px;
-   
+
 }
 /* 라디오박스 customize */
 .cupEdit .wrap-body{
@@ -542,11 +574,11 @@ input[type=text]{
     color: #8bcbc8;
     opacity: 1; /* Firefox */
   }
-  
+
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color: #8bcbc8;
   }
-  
+
   ::-ms-input-placeholder { /* Microsoft Edge */
    color: #8bcbc8;
   }
@@ -559,7 +591,7 @@ input[type=text]{
     /* 화면에따라 높이 꽉차게 하는 방법 (위에 상단 header제외시키고) */
     height: -o-calc(100vh - 102px); /* opera */
     height: -webkit-calc(100vh - 102px); /* google, safari */
-    height: -moz-calc(100vh - 102px); /* firefox */ 
+    height: -moz-calc(100vh - 102px); /* firefox */
     background: #efefef;}
 #memo .wrap{padding-top: 20px;}
 #memo .form{position:relative; padding: 0 20px; }
@@ -571,7 +603,7 @@ input[type=text]{
 #memo .list .item {
     position: relative;
     height: 60px;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
 }
 #memo .list .item .item-swipe {
     background: #ffffff;
@@ -608,7 +640,7 @@ input[type=text]{
 /* 처음 메세지 */
 .msg{
     position: fixed; z-index: 2;
-    top: 50%; left: 50%; 
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 260px; height: 160px;
     color: #fff;
@@ -619,10 +651,10 @@ input[type=text]{
 .msg p{
     padding: 30px 20px;
     line-height: 26px;
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 500;
 }
 .msg button{
-    color: #fff; 
+    color: #fff;
     text-decoration: underline;
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setting_qt</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/setting.css">
+    <!-- jquery 선언 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/setting.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header style="background-color: white; color: #161616; border-bottom: 1px solid #ccc;">
+            <a href="setting.html">
+                <button class="icon icon-arrowL"></button>
+            </a>
+            <h3>자주하는 질문</h3>
+        </header>
+        <div class="question-menu">
+            <div>
+                <li class="trigger">Q. 비밀번호 설정은 어떻게 하나요?
+                    <button class="icon icon-dropdownG"></button>
+                </li>
+                <div class="toggle">A. 환경설정 - 잠금설정에서 설정 가능합니다.
+                    비밀번호 변경 및 삭제도 해당 메뉴에서 설정 가
+                    능합니다.</div>
+            </div>
+            <div>
+                <li class="trigger">Q. 알림을 끄고 싶어요.
+                    <button class="icon icon-dropdownG"></button>
+                </li>
+                <div class="toggle">두 번째 질문에 대한 답변입니다.</div>
+            </div>
+            <div>
+                <li class="trigger">Q. 데이터를 초기화하고 싶어요.
+                    <button class="icon icon-dropdownG"></button>
+                </li>
+                <div class="toggle">세 번째 질문에 대한 답변입니다.</div>
+            </div>
+            <div>
+                <li class="trigger">Q. 백업은 어떻게 하나요?
+                    <button class="icon icon-dropdownG"></button>
+                </li>
+                <div class="toggle">네 번째 질문에 대한 답변입니다.</div>
+            </div>
+            <div>
+                <li class="trigger">Q. 이용 중인 생리컵을 추가하고 싶어요.
+                    <button class="icon icon-dropdownG"></button>
+                </li>
+                <div class="toggle">다섯 번째 질문에 대한 답변입니다.</div>
+            </div>
+        </div>
+        <button class="bottomBtn active">문의하기</button>
+    </div>
+    <div class="message" style="display: none;" >
+        <form action="" autocomplete="off">
+            <button class="icon icon-close"></button>
+            <h2>문의하기</h2>
+            <!-- <input type="text" placeholder="성함" > -->
+            <input type="email" placeholder="이메일주소" autofocus>
+            <!-- <input type="tel" placeholder="연락처"> -->
+            <textarea name="message" id="message" cols="30" rows="18" placeholder="문의내용을 입력해주세요"></textarea>
+            <input type="submit">
+        </form>
+    </div>
+    
+</body>
+</html>

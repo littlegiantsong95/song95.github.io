@@ -1,0 +1,331 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+li{list-style: none; color: #000;}
+a{text-decoration: none; color: #000; display: inline-block;}
+button{background: none; border: 0;/* outline: none; */}
+.blind{font-size: 0; position: absolute; left: -9999px;}
+
+html, body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+    background: #eee;
+    font-family: 'NanumSquareRound', sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.wrap{
+    position: relative;
+}
+
+/* 로고 + 로딩화면--------------------------------------- */
+.loading{
+    position: absolute;
+    width: 100%; height: 100vh;
+    top: 0;left: 0;
+    background: #8bcbc8;
+    z-index: 1;
+}
+.loading i{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translateX(-50%);
+}
+.loading p{
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    top: 53%;left: 50%;
+    transform: translateX(-50%);
+}
+/* 로딩 애니메이션---------------------------------------- */
+
+.box{
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    transition: all .2s ease;
+    bottom: 40px;
+}
+  .loader{
+    position: relative;
+    width: 12px;
+    height: 12px;
+
+    top: 46%;
+    top: -webkit-calc(50% - 6px);
+    top: calc(50% - 6px);
+    left: 46%;
+    left: -webkit-calc(50% - 6px);
+    left: calc(50% - 6px);
+    
+    border-radius: 12px;
+    background-color: #fff;
+    -webkit-transform-origin:  50% 50%;
+            transform-origin:  50% 50% ;
+    -webkit-animation: loader 1s ease-in-out infinite;
+            animation: loader 1s ease-in-out infinite;
+}
+
+.loader:before{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255, 255, .5);
+    top: 0px;
+    left: -25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+}
+
+.loader:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255, 255 ,255 ,.5);
+    top: 0px;
+    left: 25px;
+    height: 12px;
+    width: 12px;
+    border-radius: 12px;
+}
+
+
+@-webkit-keyframes loader{
+    0%{-webkit-transform:rotate(0deg);}
+    50%{-webkit-transform:rotate(180deg);}
+    100%{-webkit-transform:rotate(180deg);}
+}
+
+@keyframes loader{
+    0%{transform:rotate(0deg);}
+    50%{transform:rotate(180deg);}
+    100%{transform:rotate(180deg);}
+}
+
+/* 스와이프 */
+.swiper-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+}
+.swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination{
+    top: 8%;
+}
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+}
+.swiper-pagination-bullet-active{
+    background: #8bcbc8;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+
+/* 1. 로그인페이지  */
+.login-pop form .row h2{
+    padding: 90px 0 20px 0;
+    font-size: 20px;
+    color: #161616;
+    font-weight: 200;
+}
+
+/* 2. 생리컵 등록 */
+.swiper-slide h3,.upload-pop h3{
+    position: absolute;
+    top: 90px;
+    text-align: center;
+    font-size: 20px;
+    color: #161616;
+    font-weight: 200;
+    line-height: 28px;
+}
+.swiper-slide .usercup-upload{
+    position: absolute;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    background: #8bcbc8;
+    z-index: 999;
+}
+.swiper-slide .usercup-upload button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.swiper-pagination{
+    z-index: 1;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: unset;
+    left: unset;
+}
+/* 생리컵 등록 팝업 */
+.upload-pop{
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+}
+.upload-pop > button{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.upload-pop h3{
+    left: 50%;
+    transform: translateX(-50%);
+}
+.upload-pop form{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.upload-pop form .selectBox{}
+.upload-pop form .selectBox .wrap{}
+.upload-pop form .selectBox .wrap #cupName{
+    width: 320px;
+    height: 50px;
+    font-size: 18px;
+    padding-left: 10px;
+    background: #fff;
+    color: #666;
+    border: 2px solid #8bcbc8;
+   
+}
+.upload-pop form .selectBox .wrap button{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.upload-pop .bottomBtn2{
+    position: absolute;
+    background: #8bcbc8;
+}
+.upload-pop .bottomBtn2 .fill{
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.upload-pop .cup-image{
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+.upload-pop .wrap {}
+.upload-pop .wrap .control-label{
+    color: #8bcbc8;
+    padding: 12px;
+    display: block;
+}
+.upload-pop .wrap-body {
+   
+}
+
+.upload-pop .wrap label.btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.upload-pop .wrap input {
+    display: none;
+}
+
+.btn-group>.btn:not(:last-child):not(.dropdown-toggle), .btn-group>.btn-group:not(:last-child)>.btn {
+    border-top-right-radius: 50% !important;
+    border-bottom-right-radius: 50% !important;
+}
+.upload-pop .wrap label.btn.active {
+    background: #8bcbc8;
+}
+
+/* 3. 생리주기 */
+.swiper-slide:last-child .wrap{
+    font-weight: 200;
+    width: 70%;
+    height: 50%;
+    color: #333;
+}
+/* 공통점 */
+.swiper-slide:last-child .wrap div label{
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+.swiper-slide:last-child .wrap div:not(:nth-child(3)) label{
+        width: 164px;
+        float: left;
+}
+.swiper-slide:last-child .wrap div{
+    padding: 20px 0;
+}
+.swiper-slide:last-child .wrap label{
+    font-size: 20px;
+    
+}
+.swiper-slide:last-child .wrap select{
+    color: #8bcbc8;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration-line: underline;
+}
+.swiper-slide:last-child .wrap span.unit{
+    font-size: 18px;
+}
+.swiper-slide:last-child .wrap div:nth-child(3) label{
+    margin-bottom: 20px;
+}
+
+.swiper-slide:last-child button.bottomBtn{
+    background: #8bcbc8;
+}
+.swiper-slide:last-child button.bottomBtn a{
+    color: #fff;
+}

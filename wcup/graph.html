@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graph</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/graph.css">
+    <!-- jquery 선언 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    <script src="js/common.js"></script>
+    <script src="js/graph.js"></script>
+</head>
+<body>
+    <aside class="bottomNav">
+        <ul>
+            <li><a href="myPage.html">
+                    <i class="icon icon-myPage"></i>
+                    <span class="blind">마이페이지</span>
+                </a>
+            </li>
+            <li><a href="graph.html">
+                    <i class="icon icon-graph on"></i>
+                    <span class="blind">몸상태분석</span>
+                </a>
+            </li>
+            <li><a href="cal.html">
+                    <i class="icon icon-dDay"></i>
+                    <span class="blind">디데이</span>
+                </a>
+            </li>
+            <li><a href="wcup.html">
+                    <i class="icon icon-wcup"></i>
+                    <span class="blind">생리컵정보</span>
+                </a>
+            </li>
+            <li><a href="setting.html">
+                    <i class="icon icon-setting"></i>
+                    <span class="blind">환경설정</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <div class="graph">
+        <div class="contents">
+            <ul class="tab-nav">
+                <li><a href="#period" class="active">주기</a></li>
+                <li><a href="#amount">생리양</a></li>
+            </ul>
+            <div class="tab-contents">  
+                <div id="period" class="contents">
+                    주기 컨텐츠
+                </div>
+                <div id="amount" class="contents" style="display: none;">
+                    생리량 컨텐츠
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</body>
+</html>

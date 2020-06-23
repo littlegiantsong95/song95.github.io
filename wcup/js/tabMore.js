@@ -61,72 +61,36 @@ $(function(){
 
     //기분
     $('.contents #feelings i').click(function() {
-        // $('.contents #feelings i').removeClass('on on2');
-        // var clicks = $(this).data('clicks');
-        // var des=$(this).children('span').text();
-        // if (clicks) { 
-        //     $(this).addClass('on2');
-        //     $(this).parents('#feelings').find('.textBox p').text('정말'+des);
-        // } else {
-        //     $(this).addClass('on');
-        //     $(this).parents('#feelings').find('.textBox p').text(des);
-        // }
-        // $(this).data("clicks", !clicks);
-        var index=$(this).data('index');
-        console.log(index);
+        $('.contents #feelings i').removeClass('on on2');
+        var clicks = $(this).data('clicks');
         var des=$(this).children('span').text();
-        if(index==0){
-            $(this).addClass('on'); 
-            $(this).data('index',1);
-            $(this).parents('#feelings').find('.textBox p').text(des);
-        }else if(index==1){
-            $(this).addClass('on2'); 
-            $(this).data('index',2);
-            
+        if (clicks) { 
+            $(this).addClass('on2');
             $(this).parents('#feelings').find('.textBox p').text('정말'+des);
-        }else{
-            $(this).removeClass('on on2');
-            $(this).data('index',0);
-            $(this).parents('#feelings').find('.textBox p').text('');
+        } else {
+            $(this).addClass('on');
+            $(this).parents('#feelings').find('.textBox p').text(des);
         }
-        
+        $(this).data("clicks", !clicks);
     });
     
     //증상
-    $('.contents #symptom i').click(function() {
-        var index=$(this).data('index');
-        console.log(index);
-        var des=$(this).children('span').text();
-        if(index==0){
-            $(this).addClass('on'); 
-            $(this).data('index',1);
-            $(this).parents('#symptom').find('.textBox p').text(des);
-        }else if(index==1){
-            $(this).addClass('on2'); 
-            $(this).data('index',2);
-            
-            $(this).parents('#symptom').find('.textBox p').text('정말'+des);
-        }else{
-            $(this).removeClass('on on2');
-            $(this).data('index',0);
-            $(this).parents('#symptom').find('.textBox p').text('');
-        }
-        
+
     //공통 더블클릭할 때 함수(this가 문제가 되므로 el로 받아준다.)
-    // function dbclick(el){
-    //     var clicks = el.data('clicks');
-    //     var des=el.children('span').text();
-    //     if (clicks) { 
-    //         el.addClass('on2');
-    //         el.parents('#symptom').find('.textBox p').text('심한'+des);
-    //     } else {
-    //         el.addClass('on');
-    //         el.parents('#symptom').find('.textBox p').text(des);
-    //     }
-    //     el.data("clicks", !clicks);
-    // }
-    // $('.contents #symptom i').click(function(){
-    //     dbclick($(this));
+    function dbclick(el){
+        var clicks = el.data('clicks');
+        var des=el.children('span').text();
+        if (clicks) { 
+            el.addClass('on2');
+            el.parents('#symptom').find('.textBox p').text('심한'+des);
+        } else {
+            el.addClass('on');
+            el.parents('#symptom').find('.textBox p').text(des);
+        }
+        el.data("clicks", !clicks);
+    }
+    $('.contents #symptom i').click(function(){
+        dbclick($(this));
       });
 
       //증상편집하기

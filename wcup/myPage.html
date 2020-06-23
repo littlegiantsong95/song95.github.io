@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myPage</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/myPage.css">
+    <link href="src/css/swipeTo.css" rel="stylesheet">
+    <!-- jquery 선언 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swipeTo.js"></script>
+
+    <!-- <script src="src/js/swipeTo.js"></script> -->
+    <script src="js/common.js"></script>
+    <script src="js/myPage.js"></script>
+  
+</head>
+<body>
+    <div class="wrap">
+        <aside class="bottomNav">
+            <ul>
+                <li><a href="myPage.html">
+                        <i class="icon icon-myPage on"></i>
+                        <span class="blind">마이페이지</span>
+                    </a>
+                </li>
+                <li><a href="graph.html">
+                        <i class="icon icon-graph"></i>
+                        <span class="blind">몸상태분석</span>
+                    </a>
+                </li>
+                <li><a href="cal.html">
+                        <i class="icon icon-dDay"></i>
+                        <span class="blind">디데이</span>
+                    </a>
+                </li>
+                <li><a href="wcup.html">
+                        <i class="icon icon-wcup"></i>
+                        <span class="blind">생리컵정보</span>
+                    </a>
+                </li>
+                <li><a href="setting.html">
+                        <i class="icon icon-setting"></i>
+                        <span class="blind">환경설정</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <header>
+            <div class="login-icon">
+                <!-- 로그인 전 로그인 후 아이콘 바뀜 -->
+                <!-- <i class="icon icon-login"></i> -->
+                <i class="icon icon-logout"></i>
+            </div>
+            <div class="login-text" >
+                <!-- 로그인 전 로그인 후 텍스트 바뀌는 부분 -->
+                <span class="user-name">Login</span>
+                <a href="#" style="display: none;">
+                    <i class="icon icon-penSmall"></i>정보수정
+                </a>
+                <a href="#" id="logout-btn" style="display: none;">
+                    <i class="icon icon-logoutSmall"></i>로그아웃
+                </a>
+            </div>
+        </header>
+        <div class="nav">
+            <ul>
+                <li class="active">
+                    <a href="#tab1">생리컵</a>
+                </li>
+
+                <li><a href="#tab2">나의 건강</a></li>
+            </ul>
+            <span class="bar"></span>
+        </div>
+        <div class="tab-contents">
+            <div id="tab1">
+                <!-- <div class="wrap">
+                    <img src="img/cup_lily.jpg" alt="등록해주세요.">
+                    <span>예시</span>
+                    <div class="info">
+                        <dl>
+                            <dt>w컵</dt>
+                            <dd>사이즈</dd>
+                            <dd>사용기간</dd>
+                        </dl>
+                        <span class="icon icon-wcupB dropbtn"></span>
+                        <div class="dropdown" style="display: none;">
+                            <div class="dropdown-content">
+                              <a href="#">사용완료</a>
+                              <a href="#">삭제하기</a>
+                            </div>
+                          </div>
+                    </div>
+                </div> -->
+                <div class="btn-plus">
+                    <button class="icon icon-plus"></button>
+                </div>
+                
+            </div>
+            <div id="tab2" style="display: none;">
+                <div class="add">
+                    <label for="date">날짜<input type="text" class="date" id="today"></label>
+                    <label for="weight">체중
+                        <select name="weight" id="weight">
+                                <option value="">선택</option>
+                                <option value="35~40">35~40kg</option>
+                                <option value="41~45">41~45kg</option>
+                                <option value="46~50">46~50kg</option>
+                                <option value="51~55">51~55kg</option>
+                                <option value="56~60">56~60kg</option>
+                                <option value="61~65">61~65kg</option>
+                                <option value="66~70">66~70kg</option>
+                                <option value="71~75">71~75kg</option>
+                                <option value="76~80">76~80kg</option>
+                            </select>
+                    </label>
+                    <label for="tem">체온
+                        <select name="tem" id="tem">
+                            <option value="">선택</option>
+                            <option value="36.6">36.6℃</option>
+                            <option value="37.5">37.5℃</option>
+                            <option value="38">38.0℃</option>
+                            <option value="39">39.0℃</option>
+                        </select>
+                    </label>
+                    <button class="icon icon-plusBSmall"></button>
+                </div>
+                <div class="record">
+                    <!-- 입력값이 없을 때 -->
+                    <div class="wrap">
+                        <p>오늘의 체중과 체온을 입력해주세요.</p>
+                    </div>
+                    <!-- 만약에 입력값이 들어오면 -->
+                    <div id="input">
+                        <!-- <div class="wrap list">
+                            <div class="form item">
+                                <div class="autosize item-swipe" placeholder="메모를 작성해주세요.">
+                                    <span>20.02.01</span>
+                                    <span>35~40kg</span>
+                                    <span>36.6℃</span>
+                                    <i class="icon icon-pen"></i>    
+                                </div>
+                                <div class="item-back">
+                                    <button class="action first btn-delete" type="button"><i class="icon icon-trash"></i></button>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="login-pop" style="display: none;">
+            <button class="icon icon-close"></button>
+            <form action="">
+                <div class="row" style="text-align: center;">
+                    <i class="icon2 icon-logoLogin" style="margin: 50px 0;"></i>
+                    <h2 class="blind">Wcup 로그인</h2>
+                    <div class="col login-wrap">
+                        <input type="text" id="id" autocomplete="off" name="username" placeholder="아이디" >
+                        <input type="password" id="pw" autocomplete="off" name="password" placeholder="비밀번호" >
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="col sns-wrap">
+                        <div class="hide-md-lg">
+                            <p>또는 SNS계정 로그인</p>
+                        </div>
+                        <div class="sns">
+                            <a href="#" class="fb btn">
+                                <i class="fa fa-facebook fa-fw"></i> Facebook
+                                </a>
+                            <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                                </i> Google
+                            </a>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </form>
+            <div class="bottom-container">
+                <div class="row">
+                  <div class="col">
+                    <a href="#" style="color:white" class="btn">회원가입</a>
+                  </div>
+                  <div class="col">
+                    <a href="#" style="color:white" class="btn">Forgot password?</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="upload-pop" style="display: none;">
+            <button class="icon icon-close"></button>
+            <h3>생리컵 종류와 <br> 사이즈를 선택하세요.</h3>
+            <form action="">
+                <div class="selectBox">
+                    <div class="wrap">
+                        <label class="blind">생리컵종류</label>
+                        <select name="cupName" id="cupName">
+                            <option value="선택">선택해주세요.</option>
+                            <option value="lily">릴리컵(Lily Cup)</option>
+                            <option value="hanna">한나컵(Hanna Cup)</option>
+                            <option value="juju">주주컵(Juju Cup)</option>
+                            <option value="ruby">루비컵(Luby Cup)</option>
+                            <option value="mermaid">인어컵(Mermaid Cup)</option>
+                        </select>
+                    </div>
+                    <div class="cup-image">
+                        <img src="img/no-img.png" alt="">
+                        <!-- <img src="img/cup_hanna.jpg" alt="한나컵">
+                        <img src="img/cup_juju.jpg" alt="주주컵">
+                        <img src="img/cup_ruby.jpg" alt="루비컵">
+                        <img src="img/cup_mermaid.jpg" alt="인어컵"> -->
+                    </div>
+                    <div class="wrap">
+                        <label class="control-label">사이즈</label>
+                        <div class="wrap-body">
+                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn active" role="button">
+                              <input type="radio" name="options" value="S" required>S
+                            </label>
+                            <label class="btn" role="button">
+                              <input type="radio" name="options" value="M">M
+                            </label>
+                            <label class="btn" role="button">
+                                <input type="radio" name="options" value="L">L
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </form>
+            <div class="bottomBtn2">
+                <button class="fill">등록</button>
+            </div>
+
+        </div>
+        
+    </div>
+</body>
+</html>

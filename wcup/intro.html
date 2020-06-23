@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/myPage.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <!-- jquery 선언 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/intro.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="login-pop">
+                        <form action="">
+                            <div class="row" style="text-align: center;">
+                                <h2>로그인하시겠습니까?</h2>
+                                <div class="col login-wrap">
+                                    <input type="text" name="username" placeholder="아이디" required>
+                                    <input type="password" name="password" placeholder="비밀번호" required>
+                                    <input type="submit" value="Login">
+                                </div>
+                                <div class="col sns-wrap">
+                                    <div class="hide-md-lg">
+                                        <p>또는 SNS계정 로그인</p>
+                                    </div>
+                                    <div class="sns">
+                                        <a href="#" class="fb btn">
+                                            <i class="fa fa-facebook fa-fw"></i> Facebook
+                                            </a>
+                                        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                                            </i> Google
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            
+                            </div>
+                        </form>
+                        <div class="bottom-container">
+                            <div class="row">
+                              <div class="col">
+                                <a href="#" style="color:white" class="btn">회원가입</a>
+                              </div>
+                              <div class="col">
+                                <a href="#" style="color:white" class="btn">Forgot password?</a>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <h3>이용 중인 생리컵을 <br> 등록해주세요.</h3>
+                    <div class="usercup-upload">
+                        <button class="icon icon-plusW"></button>
+                    </div>
+                    <!-- 이미지 등록시 들어올 것 -->
+                    <!-- <div class="usercup-upload">
+                        <div class="uploaded-img">
+                            <img src="img/cup_lily.jpg" alt="" width="150px" height="150px">
+                        </div>
+                        <span>S</span>
+                    </div> -->
+                </div>
+                <div class="swiper-slide">
+                    <h3>생리주기를 <br> 입력해주세요.</h3>
+                    <div class="wrap">
+                        <div class="period">
+                            <label for="period">생리기간</label>
+                            <select id="period" name="period" form="period">
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                            </select>   
+                            <span class="unit">일</span>
+                        </div>
+                        <div class="cycle">
+                            <label for="cycle">생리주기</label>
+                            <select id="cycle" name="cycle" form="cycle">
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>   
+                            <span class="unit">일</span>
+                        </div>
+                        <div class="recent">
+                            <label for="recent">최근 생리시작일</label>
+                            <select id="year" name="year" form="year">
+                                <option value="2020">2020</option>
+                            </select>   
+                            <span class="unit">년</span>
+                            <select name="month" id="month">
+                                <option value="1">1</option>
+                                <option value="2" selected>2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <span class="unit">월</span>
+                            <select name="date" id="date">
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15" selected>15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <span class="unit">일</span>
+                        </div>
+                    </div>
+                    <button class="bottomBtn"><a href="cal.html">시작하기</a></button>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="loading">
+            <i class="icon icon-logo"></i>
+            <p>아이콘을 탭하세요.</p>
+            <div class="box">
+                <div class="loader"></div>
+            </div>
+        </div>
+        <div class="upload-pop" style="display: none;">
+            <button class="icon icon-close"></button>
+            <h3>생리컵 종류와 <br> 사이즈를 선택하세요.</h3>
+            <form action="">
+                <div class="selectBox">
+                    <div class="wrap">
+                        <label class="blind">생리컵종류</label>
+                        <select name="cupName" id="cupName">
+                            <option value="선택">선택해주세요.</option>
+                            <option value="릴리컵">릴리컵(Lily Cup)</option>
+                            <option value="한나컵">한나컵(Hana Cup)</option>
+                            <option value="행복컵">행복컵(Happiness Cup)</option>
+                            <option value="w컵">w컵(W Cup)</option>
+                            <option value="주주컵">주주컵(Juju Cup)</option>
+                            <option value="루나컵">루나컵(Luna Cup)</option>
+                        </select>
+                        <button class="icon icon-closeSmall"></button>
+                    </div>
+                    <div class="cup-image">
+                        <img src="img/lilycup.png" alt="lilycup">
+                    </div>
+                    <div class="wrap">
+                        <label class="control-label">사이즈</label>
+                        <div class="wrap-body">
+                          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn active" role="button">
+                              <input type="radio" name="options" value="S" required>S
+                            </label>
+                            <label class="btn" role="button">
+                              <input type="radio" name="options" value="M">M
+                            </label>
+                            <label class="btn" role="button">
+                                <input type="radio" name="options" value="L">L
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </form>
+            <div class="bottomBtn2">
+                <button class="fill">등록</button>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+</body>
+</html>

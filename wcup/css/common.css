@@ -42,7 +42,7 @@ body{font-family: 'NanumSquareRound', sans-serif;}
 
 
 /* 3번째 줄 */
-.icon-closeW{width: 50px; height: 50px;background-position: 0 100px;}
+.icon-closeW{width: 50px; height: 50px;background-position: 0 -100px;}
 .icon-myPage.on{width:50px; height:50px; background-position: -50px -100px;}
 .icon-graph.on{width:50px; height:50px; background-position: -100px -100px;}
 .icon-wcup.on{width:50px; height:50px; background-position: -150px -100px;}
@@ -181,6 +181,7 @@ body{font-family: 'NanumSquareRound', sans-serif;}
 .icon-cup1GB{width:150px; height: 150px; background-position: 0 0;}
 .icon-cup2GB{width:150px; height: 150px; background-position:-150px 0;}
 .icon-cup3GB{width:150px; height: 150px; background-position:-300px 0;}
+.icon-logoLogin{width: 95px; height: 64px; background-position: 0 -150px;}
 
 .icon-2appetite{width: 32px;height: 32px; background-position: -600px -400px;}
 .icon-2fever{width: 30px;height: 32px; background-position:-700px -400px ;}
@@ -202,6 +203,7 @@ body{font-family: 'NanumSquareRound', sans-serif;}
     background: #fff;
     border-top: 1px solid #ccc;
     box-sizing: border-box;
+    z-index: 999;
 }
 .bottomNav ul{overflow: hidden; height: 100%;}
 .bottomNav ul li{float: left; height: 100%; width: 20%; text-align: center;}
